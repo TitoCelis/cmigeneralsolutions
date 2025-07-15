@@ -1,0 +1,21 @@
+{
+  "name": "cmigeneralsolutions",
+  "version": "1.0.0",
+  "private": true,
+  "homepage": "https://TitoCelis.github.io/cmigeneralsolutions",
+  "dependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-scripts": "5.0.1",
+    "react-icons": "^4.7.1"
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  }
+}
