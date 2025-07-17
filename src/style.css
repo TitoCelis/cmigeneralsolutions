@@ -1,4 +1,9 @@
-<<<<<<< HEAD
+/* 1. Directivas de Tailwind (deben ir al principio) */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 2. Variables CSS */
 :root {
   --c1: #5aa264;
   --c2: #d5e7d8;
@@ -7,20 +12,19 @@
   --c6: #3c3c3c;
 }
 
+/* 3. Estilos globales */
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
   color: var(--c6);
 }
 
-.bg-hero {
-  background: url('./assets/hero.jpg') center/cover no-repeat;
-}
-
+/* 4. Espaciado estándar en secciones */
 section {
   padding: 2rem 1rem;
 }
 
+/* 5. Clase genérica para botones */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -30,6 +34,24 @@ section {
   text-decoration: none;
 }
 
+/* 6. Hero con overlay azul semitransparente */
+.bg-hero {
+  background:
+    linear-gradient(
+      rgba(10, 67, 119, 0.7),   /* tono azul del header */
+      rgba(10, 67, 119, 0.7)
+    ),
+    url('./assets/hero.jpg') center/cover no-repeat;
+  height: 50vh;                /* altura en móvil */
+}
+
+@media (min-width: 768px) {
+  .bg-hero {
+    height: 45vh;              /* altura en desktop */
+  }
+}
+
+/* 7. Botones flotantes de WhatsApp/LinkedIn */
 .fixed-actions {
   position: fixed;
   right: 1rem;
@@ -38,6 +60,7 @@ section {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  z-index: 50;
 }
 
 .float-btn {
@@ -49,10 +72,3 @@ section {
   justify-content: center;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
-=======
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #eef5ed;
-}
->>>>>>> 5fa0d4a7ebb4f4f1108a27350461b89b735a1042
