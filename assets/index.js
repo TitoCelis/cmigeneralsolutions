@@ -1,1 +1,0 @@
-console.log('CMI Web funcionando correctamente');
